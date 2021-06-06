@@ -1,0 +1,46 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  transition: 0.25s all ease-in-out;
+
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &__cropImgSave {
+    background-color: $color-primary;
+    padding: 0.5rem 2.5rem;
+    color: $color-white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #dd2a7bc5;
+    }
+  }
+
+  &__save-profile-data {
+    font-size: 1.5rem;
+    padding: 1rem 10rem;
+    background-color: $color-secondary;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+}

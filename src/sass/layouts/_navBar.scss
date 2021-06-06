@@ -1,0 +1,75 @@
+.navBar {
+  display: flex;
+  background-color: whitesmoke;
+  height: 5rem;
+  margin: 1rem 0 3rem 0;
+  transition: all ease-in-out 0.3s;
+  overflow: hidden;
+  @media (max-width: 900px) {
+    height: 12rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    &__item {
+      height: 3rem;
+      width: 20%;
+      border-radius: 0.8rem;
+      font-size: 2rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: gray;
+      position: relative;
+      transition: all ease-in-out 0.3s;
+      @media (max-width: 900px) {
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0.5rem;
+      }
+
+      svg {
+        height: 2rem;
+        width: 2rem;
+        fill: gray;
+        margin-right: 1.5rem;
+        transition: all ease-in-out 0.3s;
+      }
+
+      &:hover {
+        color: $color-primary;
+
+        svg {
+          fill: $color-primary;
+        }
+      }
+    }
+
+    &__item-selected {
+      color: $color-white;
+      background-color: $color-primary;
+      cursor: default;
+      pointer-events: none;
+      svg {
+        fill: $color-white;
+      }
+
+      &:hover {
+        color: $color-white;
+
+        svg {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+}
