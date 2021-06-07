@@ -62,24 +62,24 @@ function Analysis() {
             {!dataIsLoading ? (
                 <div className="analysis">
                     <WeatherCard
-                        temp={dailyForecasts && dailyForecasts.Temperature.Minimum.Value + "°"}
+                        temp={dailyForecasts && dailyForecasts.Temperature.Minimum.Value + " F"}
                         title="Min temperature"
                         date={dailyForecasts && dailyForecasts.Date}
                     />
                     <WeatherCard
-                        temp={dailyForecasts && dailyForecasts.Temperature.Maximum.Value + "°"}
+                        temp={dailyForecasts && dailyForecasts.Temperature.Maximum.Value + " F"}
                         title="Max temperature"
                         date={dailyForecasts && dailyForecasts.Date}
                     />
                     <WeatherCard
-                        temp={dailyForecasts && dailyForecasts.Day.Wind.Direction.Degrees + "°"}
-                        title="Wind direction"
+                        temp={dailyForecasts && dailyForecasts.DegreeDaySummary.Cooling.Value + " F"}
+                        title="Cooling"
                         date={dailyForecasts && dailyForecasts.Date}
                         wind={true}
                     />
                     <WeatherCard
-                        temp={dailyForecasts && dailyForecasts.Day.Wind.Speed.Value + " mi/h"}
-                        title="Wind speed"
+                        temp={dailyForecasts && dailyForecasts.DegreeDaySummary.Heating.Value + " F"}
+                        title="Heating"
                         date={dailyForecasts && dailyForecasts.Date}
                         wind={true}
                     />
