@@ -26,4 +26,8 @@
   &:hover {
     transform: scale(1.05);
   }
+  @media (max-width: 600px) {
+    width: 35rem;
+    height: 10rem;
+  }
 }
